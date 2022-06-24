@@ -1,0 +1,3 @@
+home_slider: //*[@class="bx-next"]
+product_image: (//img[@class="replace-2x img-responsive"])[1]
+content_trends: (//ul[@class="htmlcontent-home clearfix row"])[2]
