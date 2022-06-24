@@ -1,10 +1,14 @@
 *** Settings ***
 Library                 SeleniumLibrary
-Resource                ../pageObjects/homepage/homepage.robot
+Resource                ../pageObjects/register/register.robot
 
 *** Test Cases ***
-User Should Be Able See Homepage 
+User Should Be Able Register
     [Setup]                                 Open Browser Chrome
     Maximize Browser Window
-   
+    Click Sign In 
+    Insert Email
+    Click Create Account
+    Insert Personal Information
+    Click Register
     [Teardown]                              Close Browser 
