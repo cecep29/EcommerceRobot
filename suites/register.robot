@@ -11,4 +11,5 @@ User Should Be Able Register
     Click Create Account
     Insert Personal Information
     Click Register
+    Verify Register Success
     [Teardown]                              Close Browser 

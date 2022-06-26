@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220627 03:14:51.143" rpa="false" schemaversion="3">
+<suite id="s1" name="Register" source="/home/cecep/Developments/dojobox/EcommerceRobot/suites/register.robot">
+<test id="s1-t1" name="User Should Be Able Register" line="6">
+<kw name="Open Browser Chrome" library="register" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>url=${HOMEPAGE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220627 03:14:51.361" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220627 03:14:51.360" endtime="20220627 03:15:01.062"/>
+</kw>
+<status status="PASS" starttime="20220627 03:14:51.359" endtime="20220627 03:15:01.062"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220627 03:15:01.062" endtime="20220627 03:15:01.191"/>
+</kw>
+<kw name="Click Sign In" library="register">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 03:15:01.193" level="INFO">Clicking element '//a[@class="login"]'.</msg>
+<msg timestamp="20220627 03:15:04.513" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220627 03:15:04.516" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+#0 0x555e58bfbf33 &lt;unknown&gt;
+#1 0x555e58946118 &lt;unknown&gt;
+#2 0x555e58932458 &lt;unknown&gt;
+#3 0x555e58931a72 &lt;unknown&gt;
+#4 0x555e58930f15 &lt;unknown&gt;
+#5 0x555e58930654 &lt;unknown&gt;
+#6 0x555e5894cdf1 &lt;unknown&gt;
+#7 0x555e589ad6e8 &lt;unknown&gt;
+#8 0x555e58999e63 &lt;unknown&gt;
+#9 0x555e5896f82a &lt;unknown&gt;
+#10 0x555e58970985 &lt;unknown&gt;
+#11 0x555e58c404cd &lt;unknown&gt;
+#12 0x555e58c445ec &lt;unknown&gt;
+#13 0x555e58c2a71e &lt;unknown&gt;
+#14 0x555e58c45238 &lt;unknown&gt;
+#15 0x555e58c1f870 &lt;unknown&gt;
+#16 0x555e58c61608 &lt;unknown&gt;
+#17 0x555e58c61788 &lt;unknown&gt;
+#18 0x555e58c7bf1d &lt;unknown&gt;
+#19 0x7ff6db083b43 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20220627 03:15:01.192" endtime="20220627 03:15:04.520"/>
+</kw>
+<status status="FAIL" starttime="20220627 03:15:01.191" endtime="20220627 03:15:04.523"/>
+</kw>
+<kw name="Insert Email" library="register">
+<status status="NOT RUN" starttime="20220627 03:15:04.524" endtime="20220627 03:15:04.525"/>
+</kw>
+<kw name="Click Create Account" library="register">
+<status status="NOT RUN" starttime="20220627 03:15:04.525" endtime="20220627 03:15:04.525"/>
+</kw>
+<kw name="Insert Personal Information" library="register">
+<status status="NOT RUN" starttime="20220627 03:15:04.526" endtime="20220627 03:15:04.527"/>
+</kw>
+<kw name="Click Register" library="register">
+<status status="NOT RUN" starttime="20220627 03:15:04.527" endtime="20220627 03:15:04.528"/>
+</kw>
+<kw name="Verify Register Success" library="register">
+<status status="NOT RUN" starttime="20220627 03:15:04.529" endtime="20220627 03:15:04.530"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220627 03:15:04.532" endtime="20220627 03:15:04.607"/>
+</kw>
+<status status="FAIL" starttime="20220627 03:14:51.358" endtime="20220627 03:15:04.608">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+#0 0x555e58bfbf33 &lt;unknown&gt;
+#1 0x555e58946118 &lt;unknown&gt;
+#2 0x555e58932458 &lt;unknown&gt;
+#3 0x555e58931a72 &lt;unknown&gt;
+#4 0x555e58930f15 &lt;unknown&gt;
+#5 0x555e58930654 &lt;unknown&gt;
+#6 0x555e5894cdf1 &lt;unknown&gt;
+#7 0x555e589ad6e8 &lt;unknown&gt;
+#8 0x555e58999e63 &lt;unknown&gt;
+#9 0x555e5896f82a &lt;unknown&gt;
+#10 0x555e58970985 &lt;unknown&gt;
+#11 0x555e58c404cd &lt;unknown&gt;
+#12 0x555e58c445ec &lt;unknown&gt;
+#13 0x555e58c2a71e &lt;unknown&gt;
+#14 0x555e58c45238 &lt;unknown&gt;
+#15 0x555e58c1f870 &lt;unknown&gt;
+#16 0x555e58c61608 &lt;unknown&gt;
+#17 0x555e58c61788 &lt;unknown&gt;
+#18 0x555e58c7bf1d &lt;unknown&gt;
+#19 0x7ff6db083b43 &lt;unknown&gt;
+</status>
+</test>
+<status status="FAIL" starttime="20220627 03:14:51.144" endtime="20220627 03:15:04.615"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
