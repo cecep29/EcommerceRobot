@@ -1,0 +1,6 @@
+login_link: //a[@class="login"]
+input_email: //input[@id="email"]
+input_password: //input[@id="passwd"]
+submit_login: //button[@id="SubmitLogin"]
+logout_link: //a[@class="logout"]
+account: //a[@class="account"]
