@@ -1,85 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220627 16:57:21.341" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220627 22:25:01.815" rpa="false" schemaversion="3">
 <suite id="s1" name="Contact Us" source="/home/cecep/Developments/dojobox/EcommerceRobot/suites/contact_us/contact_us.robot">
 <test id="s1-t1" name="User Should Be Able Send Message" line="6">
 <kw name="Open Browser Chrome" library="contact_us" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
+<arg>browser=headlesschrome</arg>
 <arg>url=${HOMEPAGE_URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220627 16:57:21.557" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220627 16:57:21.556" endtime="20220627 16:57:35.450"/>
+<msg timestamp="20220627 22:25:02.028" level="INFO">Opening browser 'headlesschrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220627 22:25:02.027" endtime="20220627 22:26:10.081"/>
 </kw>
-<status status="PASS" starttime="20220627 16:57:21.555" endtime="20220627 16:57:35.451"/>
+<status status="PASS" starttime="20220627 22:25:02.026" endtime="20220627 22:26:10.082"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220627 16:57:35.451" endtime="20220627 16:57:35.591"/>
+<status status="PASS" starttime="20220627 22:26:10.082" endtime="20220627 22:26:10.199"/>
 </kw>
 <kw name="Click Contact Us Link" library="contact_us">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${contact_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220627 16:57:35.593" level="INFO">Clicking element '//div[@id="contact-link"]'.</msg>
-<msg timestamp="20220627 16:57:38.256" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220627 16:57:38.257" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.53)
-Stacktrace:
-#0 0x55e9b274ff33 &lt;unknown&gt;
-#1 0x55e9b249a118 &lt;unknown&gt;
-#2 0x55e9b2486458 &lt;unknown&gt;
-#3 0x55e9b2485a72 &lt;unknown&gt;
-#4 0x55e9b2484f15 &lt;unknown&gt;
-#5 0x55e9b2484654 &lt;unknown&gt;
-#6 0x55e9b24a0df1 &lt;unknown&gt;
-#7 0x55e9b25016e8 &lt;unknown&gt;
-#8 0x55e9b24ede63 &lt;unknown&gt;
-#9 0x55e9b24c382a &lt;unknown&gt;
-#10 0x55e9b24c4985 &lt;unknown&gt;
-#11 0x55e9b27944cd &lt;unknown&gt;
-#12 0x55e9b27985ec &lt;unknown&gt;
-#13 0x55e9b277e71e &lt;unknown&gt;
-#14 0x55e9b2799238 &lt;unknown&gt;
-#15 0x55e9b2773870 &lt;unknown&gt;
-#16 0x55e9b27b5608 &lt;unknown&gt;
-#17 0x55e9b27b5788 &lt;unknown&gt;
-#18 0x55e9b27cff1d &lt;unknown&gt;
-#19 0x7f7e7ffc5b43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20220627 16:57:35.592" endtime="20220627 16:57:38.258"/>
+<msg timestamp="20220627 22:26:10.201" level="INFO">Clicking element '//div[@id="contact-link"]'.</msg>
+<status status="PASS" starttime="20220627 22:26:10.201" endtime="20220627 22:26:11.578"/>
 </kw>
-<status status="FAIL" starttime="20220627 16:57:35.591" endtime="20220627 16:57:38.260"/>
+<status status="PASS" starttime="20220627 22:26:10.200" endtime="20220627 22:26:11.579"/>
+</kw>
+<kw name="Verify Contact Us Page" library="contact_us">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${contact_breadcrumb}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220627 22:26:12.739" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220627 22:26:12.742" level="FAIL">Element with locator '//*[@class="navigation_page"]' not found.</msg>
+<status status="FAIL" starttime="20220627 22:26:11.582" endtime="20220627 22:26:12.745"/>
+</kw>
+<status status="FAIL" starttime="20220627 22:26:11.580" endtime="20220627 22:26:12.747"/>
+</kw>
+<kw name="Fill Message Form" library="contact_us">
+<status status="NOT RUN" starttime="20220627 22:26:12.748" endtime="20220627 22:26:12.749"/>
+</kw>
+<kw name="Click Send" library="contact_us">
+<status status="NOT RUN" starttime="20220627 22:26:12.750" endtime="20220627 22:26:12.750"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220627 16:57:38.261" endtime="20220627 16:57:38.337"/>
+<status status="PASS" starttime="20220627 22:26:12.752" endtime="20220627 22:26:12.814"/>
 </kw>
-<status status="FAIL" starttime="20220627 16:57:21.554" endtime="20220627 16:57:38.338">WebDriverException: Message: unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.53)
-Stacktrace:
-#0 0x55e9b274ff33 &lt;unknown&gt;
-#1 0x55e9b249a118 &lt;unknown&gt;
-#2 0x55e9b2486458 &lt;unknown&gt;
-#3 0x55e9b2485a72 &lt;unknown&gt;
-#4 0x55e9b2484f15 &lt;unknown&gt;
-#5 0x55e9b2484654 &lt;unknown&gt;
-#6 0x55e9b24a0df1 &lt;unknown&gt;
-#7 0x55e9b25016e8 &lt;unknown&gt;
-#8 0x55e9b24ede63 &lt;unknown&gt;
-#9 0x55e9b24c382a &lt;unknown&gt;
-#10 0x55e9b24c4985 &lt;unknown&gt;
-#11 0x55e9b27944cd &lt;unknown&gt;
-#12 0x55e9b27985ec &lt;unknown&gt;
-#13 0x55e9b277e71e &lt;unknown&gt;
-#14 0x55e9b2799238 &lt;unknown&gt;
-#15 0x55e9b2773870 &lt;unknown&gt;
-#16 0x55e9b27b5608 &lt;unknown&gt;
-#17 0x55e9b27b5788 &lt;unknown&gt;
-#18 0x55e9b27cff1d &lt;unknown&gt;
-#19 0x7f7e7ffc5b43 &lt;unknown&gt;
-</status>
+<status status="FAIL" starttime="20220627 22:25:02.024" endtime="20220627 22:26:12.815">Element with locator '//*[@class="navigation_page"]' not found.</status>
 </test>
-<status status="FAIL" starttime="20220627 16:57:21.342" endtime="20220627 16:57:38.343"/>
+<status status="FAIL" starttime="20220627 22:25:01.817" endtime="20220627 22:26:12.816"/>
 </suite>
 <statistics>
 <total>
