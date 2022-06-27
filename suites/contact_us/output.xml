@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220627 16:57:21.341" rpa="false" schemaversion="3">
+<suite id="s1" name="Contact Us" source="/home/cecep/Developments/dojobox/EcommerceRobot/suites/contact_us/contact_us.robot">
+<test id="s1-t1" name="User Should Be Able Send Message" line="6">
+<kw name="Open Browser Chrome" library="contact_us" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>url=${HOMEPAGE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220627 16:57:21.557" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220627 16:57:21.556" endtime="20220627 16:57:35.450"/>
+</kw>
+<status status="PASS" starttime="20220627 16:57:21.555" endtime="20220627 16:57:35.451"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220627 16:57:35.451" endtime="20220627 16:57:35.591"/>
+</kw>
+<kw name="Click Contact Us Link" library="contact_us">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${contact_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 16:57:35.593" level="INFO">Clicking element '//div[@id="contact-link"]'.</msg>
+<msg timestamp="20220627 16:57:38.256" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220627 16:57:38.257" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+#0 0x55e9b274ff33 &lt;unknown&gt;
+#1 0x55e9b249a118 &lt;unknown&gt;
+#2 0x55e9b2486458 &lt;unknown&gt;
+#3 0x55e9b2485a72 &lt;unknown&gt;
+#4 0x55e9b2484f15 &lt;unknown&gt;
+#5 0x55e9b2484654 &lt;unknown&gt;
+#6 0x55e9b24a0df1 &lt;unknown&gt;
+#7 0x55e9b25016e8 &lt;unknown&gt;
+#8 0x55e9b24ede63 &lt;unknown&gt;
+#9 0x55e9b24c382a &lt;unknown&gt;
+#10 0x55e9b24c4985 &lt;unknown&gt;
+#11 0x55e9b27944cd &lt;unknown&gt;
+#12 0x55e9b27985ec &lt;unknown&gt;
+#13 0x55e9b277e71e &lt;unknown&gt;
+#14 0x55e9b2799238 &lt;unknown&gt;
+#15 0x55e9b2773870 &lt;unknown&gt;
+#16 0x55e9b27b5608 &lt;unknown&gt;
+#17 0x55e9b27b5788 &lt;unknown&gt;
+#18 0x55e9b27cff1d &lt;unknown&gt;
+#19 0x7f7e7ffc5b43 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20220627 16:57:35.592" endtime="20220627 16:57:38.258"/>
+</kw>
+<status status="FAIL" starttime="20220627 16:57:35.591" endtime="20220627 16:57:38.260"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220627 16:57:38.261" endtime="20220627 16:57:38.337"/>
+</kw>
+<status status="FAIL" starttime="20220627 16:57:21.554" endtime="20220627 16:57:38.338">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+#0 0x55e9b274ff33 &lt;unknown&gt;
+#1 0x55e9b249a118 &lt;unknown&gt;
+#2 0x55e9b2486458 &lt;unknown&gt;
+#3 0x55e9b2485a72 &lt;unknown&gt;
+#4 0x55e9b2484f15 &lt;unknown&gt;
+#5 0x55e9b2484654 &lt;unknown&gt;
+#6 0x55e9b24a0df1 &lt;unknown&gt;
+#7 0x55e9b25016e8 &lt;unknown&gt;
+#8 0x55e9b24ede63 &lt;unknown&gt;
+#9 0x55e9b24c382a &lt;unknown&gt;
+#10 0x55e9b24c4985 &lt;unknown&gt;
+#11 0x55e9b27944cd &lt;unknown&gt;
+#12 0x55e9b27985ec &lt;unknown&gt;
+#13 0x55e9b277e71e &lt;unknown&gt;
+#14 0x55e9b2799238 &lt;unknown&gt;
+#15 0x55e9b2773870 &lt;unknown&gt;
+#16 0x55e9b27b5608 &lt;unknown&gt;
+#17 0x55e9b27b5788 &lt;unknown&gt;
+#18 0x55e9b27cff1d &lt;unknown&gt;
+#19 0x7f7e7ffc5b43 &lt;unknown&gt;
+</status>
+</test>
+<status status="FAIL" starttime="20220627 16:57:21.342" endtime="20220627 16:57:38.343"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Contact Us">Contact Us</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
