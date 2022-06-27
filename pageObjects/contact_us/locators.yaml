@@ -1,0 +1,8 @@
+contact_link: //div[@id="contact-link"]
+page_heading_contact_us: //h1[@class="page-heading bottom-indent"]
+select_subject: //select[@id="id_contact"]
+input_email: //input[@id="email"]
+input_order_reference: //input[@id="id_order"]
+attach_file: //input[@id="fileUpload"]
+input_message: //textarea[@id="message"]
+send_button: //button[@id="submitMessage"]
