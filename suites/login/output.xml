@@ -1,103 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220627 03:48:27.200" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220704 15:12:53.072" rpa="false" schemaversion="3">
 <suite id="s1" name="Login" source="/home/cecep/Developments/dojobox/EcommerceRobot/suites/login/login.robot">
 <test id="s1-t1" name="User Should Be Able Login" line="6">
 <kw name="Open Browser Chrome" library="login" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
+<arg>browser=headlesschrome</arg>
 <arg>url=${HOMEPAGE_URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220627 03:48:27.416" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220627 03:48:27.415" endtime="20220627 03:48:37.539"/>
+<msg timestamp="20220704 15:12:53.279" level="INFO">Opening browser 'headlesschrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220704 15:12:53.279" endtime="20220704 15:13:07.108"/>
 </kw>
-<status status="PASS" starttime="20220627 03:48:27.415" endtime="20220627 03:48:37.539"/>
+<status status="PASS" starttime="20220704 15:12:53.278" endtime="20220704 15:13:07.108"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220627 03:48:37.540" endtime="20220627 03:48:37.659"/>
+<status status="PASS" starttime="20220704 15:13:07.109" endtime="20220704 15:13:07.218"/>
 </kw>
 <kw name="Click Sign In" library="login">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${login_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220627 03:48:37.661" level="INFO">Clicking element '//a[@class="login"]'.</msg>
-<msg timestamp="20220627 03:48:40.357" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220627 03:48:40.358" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.53)
-Stacktrace:
-#0 0x56040284ef33 &lt;unknown&gt;
-#1 0x560402599118 &lt;unknown&gt;
-#2 0x560402585458 &lt;unknown&gt;
-#3 0x560402584a72 &lt;unknown&gt;
-#4 0x560402583f15 &lt;unknown&gt;
-#5 0x560402583654 &lt;unknown&gt;
-#6 0x56040259fdf1 &lt;unknown&gt;
-#7 0x5604026006e8 &lt;unknown&gt;
-#8 0x5604025ece63 &lt;unknown&gt;
-#9 0x5604025c282a &lt;unknown&gt;
-#10 0x5604025c3985 &lt;unknown&gt;
-#11 0x5604028934cd &lt;unknown&gt;
-#12 0x5604028975ec &lt;unknown&gt;
-#13 0x56040287d71e &lt;unknown&gt;
-#14 0x560402898238 &lt;unknown&gt;
-#15 0x560402872870 &lt;unknown&gt;
-#16 0x5604028b4608 &lt;unknown&gt;
-#17 0x5604028b4788 &lt;unknown&gt;
-#18 0x5604028cef1d &lt;unknown&gt;
-#19 0x7fceac69fb43 &lt;unknown&gt;
-</msg>
-<status status="FAIL" starttime="20220627 03:48:37.660" endtime="20220627 03:48:40.360"/>
+<msg timestamp="20220704 15:13:07.222" level="INFO">Clicking element '//a[@class="login"]'.</msg>
+<status status="PASS" starttime="20220704 15:13:07.220" endtime="20220704 15:13:09.256"/>
 </kw>
-<status status="FAIL" starttime="20220627 03:48:37.659" endtime="20220627 03:48:40.361"/>
+<status status="PASS" starttime="20220704 15:13:07.219" endtime="20220704 15:13:09.256"/>
+</kw>
+<kw name="User See AUTHENTICATION text" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${auth_text}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220704 15:13:09.257" endtime="20220704 15:13:10.212"/>
+</kw>
+<status status="PASS" starttime="20220704 15:13:09.256" endtime="20220704 15:13:10.212"/>
 </kw>
 <kw name="Insert Email" library="login">
-<status status="NOT RUN" starttime="20220627 03:48:40.361" endtime="20220627 03:48:40.361"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${input_email}</arg>
+<arg>text=cecep@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 15:13:10.214" level="INFO">Typing text 'cecep@example.com' into text field '//input[@name="email"]'.</msg>
+<status status="PASS" starttime="20220704 15:13:10.213" endtime="20220704 15:13:10.361"/>
+</kw>
+<status status="PASS" starttime="20220704 15:13:10.213" endtime="20220704 15:13:10.362"/>
 </kw>
 <kw name="Insert Password" library="login">
-<status status="NOT RUN" starttime="20220627 03:48:40.362" endtime="20220627 03:48:40.362"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>rahasia</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 15:13:10.363" level="INFO">Typing text 'rahasia' into text field '//input[@id="passwd"]'.</msg>
+<status status="PASS" starttime="20220704 15:13:10.363" endtime="20220704 15:13:10.494"/>
+</kw>
+<status status="PASS" starttime="20220704 15:13:10.362" endtime="20220704 15:13:10.494"/>
 </kw>
 <kw name="Click Login" library="login">
-<status status="NOT RUN" starttime="20220627 03:48:40.362" endtime="20220627 03:48:40.362"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 15:13:10.496" level="INFO">Clicking element '//button[@id="SubmitLogin"]'.</msg>
+<status status="PASS" starttime="20220704 15:13:10.495" endtime="20220704 15:13:13.876"/>
+</kw>
+<status status="PASS" starttime="20220704 15:13:10.495" endtime="20220704 15:13:13.877"/>
+</kw>
+<kw name="User redirect to myaccount page" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${logout_link}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220704 15:13:13.878" endtime="20220704 15:13:13.924"/>
+</kw>
+<status status="PASS" starttime="20220704 15:13:13.877" endtime="20220704 15:13:13.924"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220627 03:48:40.363" endtime="20220627 03:48:40.432"/>
+<status status="PASS" starttime="20220704 15:13:13.924" endtime="20220704 15:13:13.986"/>
 </kw>
-<status status="FAIL" starttime="20220627 03:48:27.413" endtime="20220627 03:48:40.433">WebDriverException: Message: unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.53)
-Stacktrace:
-#0 0x56040284ef33 &lt;unknown&gt;
-#1 0x560402599118 &lt;unknown&gt;
-#2 0x560402585458 &lt;unknown&gt;
-#3 0x560402584a72 &lt;unknown&gt;
-#4 0x560402583f15 &lt;unknown&gt;
-#5 0x560402583654 &lt;unknown&gt;
-#6 0x56040259fdf1 &lt;unknown&gt;
-#7 0x5604026006e8 &lt;unknown&gt;
-#8 0x5604025ece63 &lt;unknown&gt;
-#9 0x5604025c282a &lt;unknown&gt;
-#10 0x5604025c3985 &lt;unknown&gt;
-#11 0x5604028934cd &lt;unknown&gt;
-#12 0x5604028975ec &lt;unknown&gt;
-#13 0x56040287d71e &lt;unknown&gt;
-#14 0x560402898238 &lt;unknown&gt;
-#15 0x560402872870 &lt;unknown&gt;
-#16 0x5604028b4608 &lt;unknown&gt;
-#17 0x5604028b4788 &lt;unknown&gt;
-#18 0x5604028cef1d &lt;unknown&gt;
-#19 0x7fceac69fb43 &lt;unknown&gt;
-</status>
+<status status="PASS" starttime="20220704 15:12:53.276" endtime="20220704 15:13:13.986"/>
 </test>
-<status status="FAIL" starttime="20220627 03:48:27.201" endtime="20220627 03:48:40.435"/>
+<status status="PASS" starttime="20220704 15:12:53.074" endtime="20220704 15:13:13.988"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
