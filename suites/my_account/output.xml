@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220705 15:30:58.346" rpa="false" schemaversion="3">
+<suite id="s1" name="My Account" source="/home/cecep/Developments/dojobox/EcommerceRobot/suites/my_account/my_account.robot">
+<test id="s1-t1" name="User Should Be Able See My Account" line="6">
+<kw name="Open Browser Chrome" library="my_account" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=headlesschrome</arg>
+<arg>url=${HOMEPAGE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220705 15:30:58.548" level="INFO">Opening browser 'headlesschrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220705 15:30:58.548" endtime="20220705 15:31:08.847"/>
+</kw>
+<status status="PASS" starttime="20220705 15:30:58.547" endtime="20220705 15:31:08.847"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220705 15:31:08.848" endtime="20220705 15:31:08.959"/>
+</kw>
+<kw name="User Login" library="my_account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_link}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220705 15:31:08.962" endtime="20220705 15:31:09.065"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 15:31:09.067" level="INFO">Clicking element '//a[@class="login"]'.</msg>
+<status status="PASS" starttime="20220705 15:31:09.066" endtime="20220705 15:31:11.121"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${email_label}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220705 15:31:11.121" endtime="20220705 15:31:12.082"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>cecep@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220705 15:31:12.083" level="INFO">Typing text 'cecep@example.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" starttime="20220705 15:31:12.082" endtime="20220705 15:31:12.264"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>rahasia</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220705 15:31:12.265" level="INFO">Typing text 'rahasia' into text field '//input[@id="passwd"]'.</msg>
+<status status="PASS" starttime="20220705 15:31:12.264" endtime="20220705 15:31:12.401"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submit_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 15:31:12.402" level="INFO">Clicking element '//button[@id="SubmitLogin"]'.</msg>
+<status status="PASS" starttime="20220705 15:31:12.401" endtime="20220705 15:31:18.501"/>
+</kw>
+<status status="PASS" starttime="20220705 15:31:08.960" endtime="20220705 15:31:18.501"/>
+</kw>
+<kw name="Verify My Account" library="my_account">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${logout_link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220705 15:31:18.575" level="INFO">Element '//a[@class="logout"]' is displayed.</msg>
+<status status="PASS" starttime="20220705 15:31:18.503" endtime="20220705 15:31:18.576"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${account}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220705 15:31:18.622" level="INFO">Element '//a[@class="account"]' is displayed.</msg>
+<status status="PASS" starttime="20220705 15:31:18.576" endtime="20220705 15:31:18.622"/>
+</kw>
+<status status="PASS" starttime="20220705 15:31:18.502" endtime="20220705 15:31:18.623"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220705 15:31:18.623" endtime="20220705 15:31:18.684"/>
+</kw>
+<status status="PASS" starttime="20220705 15:30:58.546" endtime="20220705 15:31:18.684"/>
+</test>
+<status status="PASS" starttime="20220705 15:30:58.347" endtime="20220705 15:31:18.686"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="My Account">My Account</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
