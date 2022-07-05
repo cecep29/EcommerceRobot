@@ -10,5 +10,6 @@ User Should Be Able Send Message
     Verify Contact Us Page 
     Fill Message Form
     Click Send 
+    Verify message has been sent successfully
     [Teardown]                              Close Browser
 
